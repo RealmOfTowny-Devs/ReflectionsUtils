@@ -131,8 +131,8 @@ public class SkullUtils extends NMSUtils{
 	public static ItemStack getPlayerSkull(String name) {
         ItemStack itemStack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
         SkullMeta meta = (SkullMeta) itemStack.getItemMeta();
-        if(UUIDUtils.getUUIDfromPlayerName(name)!=null){
-        	meta.setOwningPlayer(Bukkit.getOfflinePlayer(UUIDUtils.getUUIDfromPlayerName(name)));
+        if(UUIDUtils.UUIDFetcher.getUUID(name)!=null){
+        	meta.setOwningPlayer(Bukkit.getOfflinePlayer(UUIDUtils.UUIDFetcher.getUUID(name)));
         }else{
         	meta.setDisplayName("Steve");
         }        
